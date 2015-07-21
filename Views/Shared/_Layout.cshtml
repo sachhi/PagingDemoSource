@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <style type="text/css">
+        .nuget-badge code
+        {
+            background-color: #202020;
+            border: 4px solid #c0c0c0;
+            color: #e2e2e2;
+            display: block;
+            font: 1.2em 'andale mono' , 'lucida console'  , monospace;
+            height: 25px;
+            line-height: 1.5em;
+            padding: 15px;
+            width: auto;
+            z-index: 3;
+        }
+    </style>
+    <link href="~/Content/paging.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    @RenderBody()
+
+    @Scripts.Render("~/js")
+    @Scripts.Render("~/bundles/jqueryval")
+    @RenderSection("Scripts", required: false)
+    <script type="text/javascript">
+        $(function () {
+            $('a').tooltip();
+        });
+    </script>
+    
+</body>
+</html>
